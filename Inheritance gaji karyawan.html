@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perhitungan Gaji Karyawan (Inheritance)</title>
+</head>
+<body style="background-color: steelblue;"><center>
+    <h1 style="color: rgb(15, 196, 228);">Perhitungan Gaji Karyawan (Inheritance)</h1>
+    <table style="width: 860px; height: 460px; border-radius: 200px;  color: aqua;">
+        <tr>
+            <th rowspan="1" bgcolor="darkslateblue">Jabatan</th>
+            <th rowspan="1" bgcolor="darkslateblue" id="1"></th>
+            <th rowspan="1" bgcolor="darkslateblue" id="10"></th>
+            <th rowspan="1" bgcolor="darkslateblue" id="19"></th>
+            <th rowspan="1" bgcolor="darkslateblue" id="28"></th>
+            <th rowspan="1" bgcolor="darkslateblue" id="37"></th>
+        </tr>
+        <tr>
+            <th rowspan="1" bgcolor="darkslateblue">Nik</th>
+            <th rowspan="1" bgcolor="darkslateblue" id="2"></th>
+            <th rowspan="1" bgcolor="darkslateblue" id="11"></th>
+            <th rowspan="1" bgcolor="darkslateblue" id="20"></th>
+            <th rowspan="1" bgcolor="darkslateblue" id="29"></th>
+            <th rowspan="1" bgcolor="darkslateblue" id="38"></th>
+        </tr>
+        <tr>
+            <th rowspan="1" bgcolor="darkslateblue">Nama</th>
+            <th rowspan="1" bgcolor="darkslateblue" id="3"></th>
+            <th rowspan="1" bgcolor="darkslateblue" id="12"></th>
+            <th rowspan="1" bgcolor="darkslateblue" id="21"></th>
+            <th rowspan="1" bgcolor="darkslateblue" id="30"></th>
+            <th rowspan="1" bgcolor="darkslateblue" id="39"></th>
+        </tr>
+        <tr>
+            <th rowspan="1" bgcolor="darkslateblue">Golongan</th>
+            <th rowspan="1" bgcolor="darkslateblue" id="4"></th>
+            <th rowspan="1" bgcolor="darkslateblue" id="13"></th>
+            <th rowspan="1" bgcolor="darkslateblue" id="22"></th>
+            <th rowspan="1" bgcolor="darkslateblue" id="31"></th>
+            <th rowspan="1" bgcolor="darkslateblue" id="40"></th>
+        </tr>
+        <tr>
+            <th rowspan="1" bgcolor="darkslateblue">Tunjangan Golongan</th>
+            <th rowspan="1" bgcolor="darkslateblue" id="5"></th>
+            <th rowspan="1" bgcolor="darkslateblue" id="14"></th>
+            <th rowspan="1" bgcolor="darkslateblue" id="23"></th>
+            <th rowspan="1" bgcolor="darkslateblue" id="32"></th>
+            <th rowspan="1" bgcolor="darkslateblue" id="41"></th>
+        </tr>
+        <tr>
+            <th rowspan="1" bgcolor="darkslateblue">Tunjangan Jabatan </th>
+            <th rowspan="1" bgcolor="darkslateblue" id="6"></th>
+            <th rowspan="1" bgcolor="darkslateblue" id="15"></th>
+            <th rowspan="1" bgcolor="darkslateblue" id="24"></th>
+            <th rowspan="1" bgcolor="darkslateblue" id="33"></th>
+            <th rowspan="1" bgcolor="darkslateblue" id="42"></th>
+        </tr>
+        <tr>
+            <th rowspan="1" bgcolor="darkslateblue">Jumlah kehadiran</th>
+            <th rowspan="1" bgcolor="darkslateblue" id="7"></th>
+            <th rowspan="1" bgcolor="darkslateblue" id="16"></th>
+            <th rowspan="1" bgcolor="darkslateblue" id="25"></th>
+            <th rowspan="1" bgcolor="darkslateblue" id="34"></th>
+            <th rowspan="1" bgcolor="darkslateblue" id="43"></th>
+        </tr>
+        <tr>
+            <th rowspan="1" bgcolor="darkslateblue">Tunjangan kehadiran</th>
+            <th rowspan="1" bgcolor="darkslateblue" id="8"></th>
+            <th rowspan="1" bgcolor="darkslateblue" id="17"></th>
+            <th rowspan="1" bgcolor="darkslateblue" id="26"></th>
+            <th rowspan="1" bgcolor="darkslateblue" id="35"></th>
+            <th rowspan="1" bgcolor="darkslateblue" id="44"></th>
+        </tr>
+        <tr>
+            <th rowspan="1" bgcolor="darkslateblue">Gaji</th>
+            <th rowspan="1" bgcolor="darkslateblue" id="9"></th>
+            <th rowspan="1" bgcolor="darkslateblue" id="18"></th>
+            <th rowspan="1" bgcolor="darkslateblue" id="27"></th>
+            <th rowspan="1" bgcolor="darkslateblue" id="36"></th>
+            <th rowspan="1" bgcolor="darkslateblue" id="45"></th>
+        </tr>
+    </center>
+    <script>
+        class Pegawai{
+            constructor(jabatan,nik,nama){
+                this.jabatan=jabatan;
+                this.nik=nik;
+                this.nama=nama
+            }
+        }
+
+        class Manager extends Pegawai{//sub class dari Pegawai
+            constructor(jabatan,nik,nama,golongan,tunjangang,tunjanganj,jkehadiran,tunjangank,gaji){
+                super(jabatan,nik,nama);
+                this.golongan=golongan;
+                this.tunjangang=tunjangang;
+                this.tunjanganj=tunjanganj;
+                this.jkehadiran=jkehadiran;
+                this.tunjangank=tunjangank;
+                this.gaji=gaji
+            }
+        }
+
+        class karyawan extends Pegawai{//sub class dari Pegawai
+            constructor(jabatan,nik,nama,golongan,tunjangang,tunjanganj,jkehadiran,tunjangank,gaji){
+                super(jabatan,nik,nama);
+                this.golongan=golongan;
+                this.tunjangang=tunjangang;
+                this.tunjanganj=tunjanganj;
+                this.jkehadiran=jkehadiran;
+                this.tunjangank=tunjangank;
+                this.gaji=gaji
+            }
+        }
+
+        const manager = new Manager("Manager",1578930,"Kamdo Tanjiro","A",500000,2000000,26,26*100000,2100000);
+        const managerA = new Manager("Manager",1348980,"Tatsuka Ouji","B",1000000,2000000,25,25*100000,1000000 + 2000000 + 25 + 25*100000);
+        const karyawanA = new karyawan("KABAG",1746355,"Ywact ranval","A",500000,1000000,24,24*100000,500000 + 1000000 + 24 + 24*100000);
+        const karyawanB = new karyawan("KABAG",1347980,"komei shoui","C",1500000,1000000,28,28*100000,1500000 + 2000000 + 28 + 28*100000);
+        const managerC = new Manager("Manager",1334180,"Kyoujuro senka","C",1500000,2000000,25,25*100000,1500000 + 2000000 + 25 + 25*100000);
+        document.getElementById("1").innerHTML=manager.jabatan
+        document.getElementById("2").innerHTML=manager.nik
+        document.getElementById("3").innerHTML=manager.nama
+        document.getElementById("4").innerHTML=manager.golongan
+        document.getElementById("5").innerHTML=manager.tunjangang
+        document.getElementById("6").innerHTML=manager.tunjanganj
+        document.getElementById("7").innerHTML=manager.jkehadiran
+        document.getElementById("8").innerHTML=manager.tunjangank
+        document.getElementById("9").innerHTML=manager.gaji
+
+        document.getElementById("10").innerHTML=managerA.jabatan
+        document.getElementById("11").innerHTML=managerA.nik
+        document.getElementById("12").innerHTML=managerA.nama
+        document.getElementById("13").innerHTML=managerA.golongan
+        document.getElementById("14").innerHTML=managerA.tunjangang
+        document.getElementById("15").innerHTML=managerA.tunjanganj
+        document.getElementById("16").innerHTML=managerA.jkehadiran
+        document.getElementById("17").innerHTML=managerA.tunjangank
+        document.getElementById("18").innerHTML=managerA.gaji
+
+        document.getElementById("19").innerHTML=karyawanA.jabatan
+        document.getElementById("20").innerHTML=karyawanA.nik
+        document.getElementById("21").innerHTML=karyawanA.nama
+        document.getElementById("22").innerHTML=karyawanA.golongan
+        document.getElementById("23").innerHTML=karyawanA.tunjangang
+        document.getElementById("24").innerHTML=karyawanA.tunjanganj
+        document.getElementById("25").innerHTML=karyawanA.jkehadiran
+        document.getElementById("26").innerHTML=karyawanA.tunjangank
+        document.getElementById("27").innerHTML=karyawanA.gaji
+
+        document.getElementById("28").innerHTML=karyawanB.jabatan
+        document.getElementById("29").innerHTML=karyawanB.nik
+        document.getElementById("30").innerHTML=karyawanB.nama
+        document.getElementById("31").innerHTML=karyawanB.golongan
+        document.getElementById("32").innerHTML=karyawanB.tunjangang
+        document.getElementById("33").innerHTML=karyawanB.tunjanganj
+        document.getElementById("34").innerHTML=karyawanB.jkehadiran
+        document.getElementById("35").innerHTML=karyawanB.tunjangank
+        document.getElementById("36").innerHTML=karyawanB.gaji
+
+        document.getElementById("37").innerHTML=managerC.jabatan
+        document.getElementById("38").innerHTML=managerC.nik
+        document.getElementById("39").innerHTML=managerC.nama
+        document.getElementById("40").innerHTML=managerC.golongan
+        document.getElementById("41").innerHTML=managerC.tunjangang
+        document.getElementById("42").innerHTML=managerC.tunjanganj
+        document.getElementById("43").innerHTML=managerC.jkehadiran
+        document.getElementById("44").innerHTML=managerC.tunjangank
+        document.getElementById("45").innerHTML=managerC.gaji
+    </script>
+</body>
+</html>
